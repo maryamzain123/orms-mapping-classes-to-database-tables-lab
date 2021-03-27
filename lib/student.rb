@@ -16,7 +16,9 @@ def self.create_table
         name TEXT, 
         grade TEXT
         )
+
         SQL
+        
     DB[:conn].execute(sql) 
 end
 
@@ -28,6 +30,7 @@ def save
   SQL
 
   DB[:conn].execute(sql, self.name, self.grade)
+end
 
   def self.drop_table
     sql =  <<-SQL 
